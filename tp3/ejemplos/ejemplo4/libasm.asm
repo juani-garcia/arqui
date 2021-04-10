@@ -12,3 +12,7 @@ sys_write:
     mov ecx, [ebp+12] ; buffer
     mov edx, [ebp+16] ; length
     int 0x80 
+    pop ebx
+    mov esp, ebp
+    pop ebp
+    ret
