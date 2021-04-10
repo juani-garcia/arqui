@@ -1,0 +1,3 @@
+https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86-32_bit
+https://stackoverflow.com/questions/8312290/how-to-open-a-file-in-assembler-and-modify-it
+https://stackoverflow.com/questions/48541868/how-to-append-to-a-file-using-x86-64-linux-system-calls
