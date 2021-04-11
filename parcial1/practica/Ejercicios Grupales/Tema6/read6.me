@@ -1,0 +1,49 @@
+
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 6
+
+Objetivo: 
+
+Su programa debe realizar leer un valor numérico de 3 posiciones de un archivo A y otro valor numérico de 3 posiciones de un archivo B y guardar el valor producto en 6 posiciones en un archivo C
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:			// No fue implementado
+
+
+nasm -f elf32 tema6asm.asm
+
+gcc -m32 -c tema6.c
+
+gcc -m32 tema6.o tema6asm.o -o tema6
+
+./tema6
+
+
+
+nasm -f elf32 tema6asm.asm && gcc -m32 -c tema6.c && gcc -m32 tema6.o tema6asm.o -o tema6 && ./tema6
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema6asm64.asm
+
+gcc -m64 -c tema6.c
+
+gcc -m64 tema6.o tema6asm64.o -o tema6
+
+./tema6
+
+
+
+nasm -f elf64 tema6asm64.asm && gcc -m64 -c tema6.c && gcc -m64 tema6.o tema6asm64.o -o tema6 && ./tema6
+
+
+

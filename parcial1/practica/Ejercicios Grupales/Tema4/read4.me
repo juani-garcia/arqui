@@ -1,0 +1,49 @@
+
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 4
+
+Objetivo: 
+
+Su programa debe realizar leer un string del teclado y guardarlo en un archivo
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:			// No fue implementado
+
+
+nasm -f elf32 tema4asm.asm
+
+gcc -m32 -c tema4.c
+
+gcc -m32 tema4.o tema4asm.o -o tema4
+
+./tema4
+
+
+
+nasm -f elf32 tema4asm.asm && gcc -m32 -c tema4.c && gcc -m32 tema4.o tema4asm.o -o tema4 && ./tema4
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema4asm64.asm
+
+gcc -m64 -c tema4.c
+
+gcc -m64 tema4.o tema4asm64.o -o tema4
+
+./tema4
+
+
+
+nasm -f elf64 tema4asm64.asm && gcc -m64 -c tema4.c && gcc -m64 tema4.o tema4asm64.o -o tema4 && ./tema4
+
+
+

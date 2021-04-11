@@ -1,0 +1,49 @@
+
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 1
+
+Objetivo: 
+
+Su programa debe recibir dos números mediante lectura del teclado, realizar la suma de ambos e imprimir en la pantalla el resultado.
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 tema1asm.asm
+
+gcc -m32 -c tema1.c
+
+gcc -m32 tema1.o tema1asm.o -o tema1
+
+./tema1
+
+
+
+nasm -f elf32 tema1asm.asm && gcc -m32 -c tema1.c && gcc -m32 tema1.o tema1asm.o -o tema1 && ./tema1
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema1asm64.asm
+
+gcc -m64 -c tema1.c
+
+gcc -m64 tema1.o tema1asm64.o -o tema1
+
+./tema1
+
+
+
+nasm -f elf64 tema1asm64.asm && gcc -m64 -c tema1.c && gcc -m64 tema1.o tema1asm64.o -o tema1 && ./tema1
+
+
+

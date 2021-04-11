@@ -1,0 +1,32 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 1
+
+Error: 
+ 
+ El programa recibe como argumento un numero que luego buscara en el archivo datos.txt. Sin embargo, al correrlo genera un error de tipo Floating Point Exception. Esto se produce ya que en la seccion while hay una linea, "mov bl,0", que producira luego una division por cero en la 
+seccion iteration. La forma de corregir dicho error seria modificar la linea "mov bl,0" por "mov bl,2". Notese tambien que, si bien no genera un
+error, el programa no contempla recibir mas de un argumento.
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

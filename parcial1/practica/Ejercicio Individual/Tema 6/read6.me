@@ -1,0 +1,31 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 6
+
+Error: 
+ 
+ Debido al push ebp del armado del stack frame, las posiciones de direccion de retorno y de los argumentos se desplazan en el stack por lo que
+para acceder a la direccion de retorno en la linea "mov   ecx,[ebp+4]" deberia ser "mov   ecx,[ebp+8]" y, para acceder al primer argumento, en vez de "mov   ecx,[ebp+8]" deberia ser "mov   ecx,[ebp+12]" 
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

@@ -1,0 +1,48 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 2
+
+Objetivo: 
+
+Su programa debe desplegar en pantalla el dia y hora del sistema.
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 tema2asm.asm
+
+gcc -m32 -c tema2.c
+
+gcc -m32 tema2.o tema2asm.o -o tema2
+
+./tema2
+
+
+
+nasm -f elf32 tema2asm.asm && gcc -m32 -c tema2.c && gcc -m32 tema2.o tema2asm.o -o tema2 && ./tema2
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema2asm64.asm
+
+gcc -m64 -c tema2.c
+
+gcc -m64 tema2.o tema2asm64.o -o tema2
+
+./tema2
+
+
+
+nasm -f elf64 tema2asm64.asm && gcc -m64 -c tema2.c && gcc -m64 tema2.o tema2asm64.o -o tema2 && ./tema2
+
+
+

@@ -1,0 +1,30 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 4
+
+Error: 
+ 
+ Esta mal el armado del stack frame al principio del programa. Luego del "push ebp" falta la linea "mov ebp,esp"
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

@@ -1,0 +1,30 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 8
+
+Error: 
+ 
+Aunque se le pase un argumento correcto, siempre devuelve no encontrado. Esto se debe a que en cargo_datos, al hacer la syscall para leer el archivo, falto pasarle el buffer a traves del registro ecx. Esto se solucionaria agregando la linea "mov ecx, buffer" debajo de "mov edx,150" y antes de "mov ebx,eax"
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

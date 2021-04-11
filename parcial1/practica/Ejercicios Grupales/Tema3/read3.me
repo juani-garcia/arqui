@@ -1,0 +1,49 @@
+
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 3
+
+Objetivo: 
+
+Su programa debe realizar un fork de forma tal que se creen un proceso hijo y tanto el padre como el hijo desplieguen en pantalla un mensaje identificatorio con su número de proceso.
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 tema3asm.asm
+
+gcc -m32 -c tema3.c
+
+gcc -m32 tema3.o tema3asm.o -o tema3
+
+./tema3
+
+
+
+nasm -f elf32 tema3asm.asm && gcc -m32 -c tema3.c && gcc -m32 tema3.o tema3asm.o -o tema3 && ./tema3
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema3asm64.asm
+
+gcc -m64 -c tema3.c
+
+gcc -m64 tema3.o tema3asm64.o -o tema3
+
+./tema3
+
+
+
+nasm -f elf64 tema3asm64.asm && gcc -m64 -c tema3.c && gcc -m64 tema3.o tema3asm64.o -o tema3 && ./tema3
+
+
+

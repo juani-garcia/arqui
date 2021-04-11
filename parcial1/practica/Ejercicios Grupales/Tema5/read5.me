@@ -1,0 +1,49 @@
+
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 5
+
+Objetivo: 
+
+Su programa debe realizar leer un string de 10 caracteres de un archivo A y otro string del archivo B y guardar ambos strings en un archivo C
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:			// No fue implementado
+
+
+nasm -f elf32 tema5asm.asm
+
+gcc -m32 -c tema5.c
+
+gcc -m32 tema5.o tema5asm.o -o tema5
+
+./tema5
+
+
+
+nasm -f elf32 tema5asm.asm && gcc -m32 -c tema5.c && gcc -m32 tema5.o tema5asm.o -o tema5 && ./tema5
+
+
+****************************************
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 tema5asm64.asm
+
+gcc -m64 -c tema5.c
+
+gcc -m64 tema5.o tema5asm64.o -o tema5
+
+./tema5
+
+
+
+nasm -f elf64 tema5asm64.asm && gcc -m64 -c tema5.c && gcc -m64 tema5.o tema5asm64.o -o tema5 && ./tema5
+
+
+

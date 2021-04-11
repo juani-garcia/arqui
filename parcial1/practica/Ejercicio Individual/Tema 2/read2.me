@@ -1,0 +1,30 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 2
+
+Error: 
+ 
+ En la seccion cargo_datos se intentaba hacer una syscall de read sin pasarle el file descriptor en el registro ebx. Se corregiria agregando la linea "mov ebx,eax" justo antes de la linea "mov eax,3"
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

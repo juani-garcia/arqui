@@ -1,0 +1,30 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 7
+
+Error: 
+ 
+ En la seccion de main se hace un "cmp   eax,0", esta comparacion retorna un valor negativo en caso de que el argumento sea incorrecto por lo que en la linea "jg  errorparm" deberia ser un jl en vez de jg, con lo que quedaria "jl  errorparm"
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+

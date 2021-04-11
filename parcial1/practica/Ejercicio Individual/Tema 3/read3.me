@@ -1,0 +1,30 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+Tema 3
+
+Error: 
+ 
+En la seccion printscr, luego de llamar a la funcion externa printf falta incrementar el stack pointer, lo que se puede hacer agregando la linea "add esp, 4" justo antes del ret. Notese que esto mismo se hace en otras secciones como en not_ok o falta_parm
+ 
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 32-bits:
+
+
+nasm -f elf32 busqueda_binaria.asm
+
+gcc -m32 busqueda_binaria.o -o busqueda_binaria
+
+./busqueda_binaria 0011
+
+
+
+nasm -f elf32 busqueda_binaria.asm && gcc -m32 busqueda_binaria.o -o busqueda_binaria && ./busqueda_binaria 0011
+
+
+****************************************
+
