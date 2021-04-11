@@ -28,7 +28,7 @@ myread:
 	syscall
 
 	mov rsp, rbp
-	pop rbp
+	pop rb
 	ret
 
 ; int myopen(const char *filename, int access, int permit);			// Abre un archivo

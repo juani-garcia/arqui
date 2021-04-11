@@ -1,0 +1,28 @@
+Prado Torres, Macarena   Legajo: 59.711
+
+*****************************************************************************************************************************************
+
+
+Error: 
+ 
+ Al principio se puede observar que pases la cantidad de argumentos que pases siempre tira el mismo error: "Requires exactly two arguments". Esto se debe a que al principio del codigo, en la linea "cmp rsi, 3" no deberia comparar con rsi sino con rdi, es decir, deberia ser "cmp rdi, 3". Por ultimo, el segundo error se debe a que no retorna el error "The exponent may not be negative" cuando se ingresa como segundo argumento un numero negativo. Este error se encuentra en la linea "mov  rax,rsi", ya que esta linea pisa el valor de rax retornado por atoi, por lo que el numero negativo pasa a ser uno positivo y en la comparacion con cero nunca retornaria un valor negativo. La solucion consistiria en eliminar esa linea ya que, en el caso de que el argumento sea positivo, rax ya cuenta con el mismo valor que rsi por lo que la linea "mov  rax,rsi" es completamente innecesaria.
+
+*****************************************************************************************************************************************
+
+
+Compilar y linkeditar en 64-bits:
+
+
+nasm -f elf64 ej2.asm
+
+gcc -no-pie -m64 ej2.o -o ej2
+
+./ej2 
+
+
+
+nasm -f elf64 ej2.asm && gcc -no-pie -m64 ej2.o -o ej2 && ./ej2 
+
+
+****************************************
+
