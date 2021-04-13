@@ -20,3 +20,7 @@
     en eax -1. Se podria arreglar bien haciendo que el atoi lea hasta que
     el valor leido no sea un digito, o bien arreglando el datos.txt para que
     el mismo termine con un espacio en lugar de un salto de linea.
+    
+4 - Falta el ret de la funcion cargo_datos. Tbh no tengo ni idea
+    por que funciona sin ese ret.
+#   ¯\_(ツ)_/¯.

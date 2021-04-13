@@ -32,20 +32,20 @@ int main(){
 			return 1;
 		numbers[i] = strtonum(str);
 	}
+
     int repetitions[LEN];
     for(int i = 0; i < LEN; i++){
         repetitions[i] = 1;
     }
-    for (int i = 0; i < LEN; i++){
-        if(repetitions[i]!=-1){
-            for (int j = i+1; j < LEN; j++){
+
+    for (int i = 0; i < LEN; i++)
+        if(repetitions[i]!=-1)
+            for (int j = i+1; j < LEN; j++)
                 if (numbers[i] == numbers[j]){
                     repetitions[i]++; // si numbers es {2, 2, 2, 2, 1} --> {4, -1, -1, -1, 1}
                     repetitions[j] = -1;
                 }
-            }
-        }
-    }
+
     int min = LEN + 1;
     int i=0;
     for (; i < LEN; i++){
