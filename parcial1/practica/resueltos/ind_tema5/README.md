@@ -23,4 +23,4 @@
     
 4 - Falta el ret de la funcion cargo_datos. Tbh no tengo ni idea
     por que funciona sin ese ret.
-#   ¯\_(ツ)_/¯.
+#   ¯\\_(ツ)_/¯.
