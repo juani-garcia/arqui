@@ -9,7 +9,7 @@ int sys_close(int fd);
 int sys_open(const char * fileName, int mode, int perm);
 
 // Funciones nuestras para manejo de strings
-int strtonum(const char * str);
+int strtonum(const char * str, int * ok);
 int isValid(char * num);
 void numtostr(int num, char * ans);
 int numlen(int num);
@@ -27,18 +27,19 @@ int main(){
     num1[a] = 0;
     int b = sys_read(fd_b, num2, READ);
     num2[b] = 0;
-
     if(a == 0 || b == 0){
         sys_write(1, BAD_READ, _strlen(BAD_READ));
         return 1;
     }
-
-    if(!isValid(num1) || !isValid(num2)){
+    int ok1 = 0, ok2 = 0;
+    int num3 = strtonum(num1, &ok1) * strtonum(num2, &ok2);
+    sys_write(1, "OK\n", 3);
+    if(!ok1 || !ok2){
         sys_write(1, INVALID, _strlen(INVALID));
         return 1;
     }
-    int num3 = strtonum(num1) * strtonum(num2);
     char ans[(2 * READ) + 1];
+    
     numtostr(num3, ans);
     sys_write(fd_c, ans, _strlen(ans));
 
@@ -59,17 +60,29 @@ int isValid(char * num){
 
 
 
-int strtonum(const char * str){
+int strtonum(const char * str, int * ok){
     int res = 0, i = 0, sign = 1;
+
+    if(*str == 0){
+        *ok = 0;
+        return 0;
+    }
 
     if (str[i] == '-'){
         sign = -1;
         i++;
 	}
 
-    for (; str[i]; i++)
-        res = (res * 10) + (str[i] - '0');
-
+    while(str[i]){
+        if(str[i] <= '9' && str[i] >= '0')
+            res = (res * 10) + (str[i] - '0');
+        else{
+            *ok = 0;
+            return res;
+        }
+        i++;
+    }
+    *ok = 1;
     return sign * res;
 }
 
