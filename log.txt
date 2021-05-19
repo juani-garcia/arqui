@@ -1,0 +1,2 @@
+Jero como que todavia no podes leer con itnerrupts.
+
